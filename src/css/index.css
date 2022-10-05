@@ -6,38 +6,55 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 100vh;
+    background-attachment: fixed;
 }
 
 main {
     width: 580px;
 }
 
-.avatar {
-    margin-top: 32px;
-
-    width: 120px;
-    height: 120px;
-
-    /* border-radius: 50%; */
-    border: 4px solid;
-    /* linear-gradient(90deg, #9572fc 0%, #43e7ad 50%, #e2d45c 100%); */
-
-    /* border-image-source: linear-gradient(
+.avatar-section {
+    background-image: linear-gradient(
         90deg,
         #9572fc 0%,
         #43e7ad 50%,
         #e2d45c 100%
-    ); */
+    );
 
-    /* border-color: ; */
+    margin: 32px 0;
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+}
+
+.cards-section {
+    background-image: linear-gradient(
+        90deg,
+        #9572fc 0%,
+        #43e7ad 50%,
+        #e2d45c 100%
+    );
+    border-radius: 10px;
+    padding-top: 4px;
+    margin-bottom: 24px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     background-color: #2a2634;
-    margin: 32px 0 24px 0;
+    /* margin: 32px 0 24px 0; */
     padding: 24px 32px 32px 32px;
     border-radius: 8px;
 }
@@ -74,9 +91,11 @@ main {
 }
 
 .games img {
-    border-radius: 8px;
     width: 90px;
     height: 120px;
+    border: 1px solid #443e54;
+    box-sizing: border-box;
+    border-radius: 8px;
 }
 
 .channels img {
@@ -90,4 +109,11 @@ main {
 .social img {
     width: 32px;
     height: 32px;
+}
+
+.clickable {
+    transition: 0.2s ease-in-out;
+}
+.clickable:hover {
+    transform: scale(1.3, 1.3);
 }
